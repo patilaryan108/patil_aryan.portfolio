@@ -1,10 +1,13 @@
 .skill-background {
     height: 2600px;
     width: 100%;
+    max-width: 100vw;
     display: "flex";
     justify-content: "center";
     background-image: url("/Skill.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    box-sizing: border-box;
+    overflow-x: hidden;
 }
