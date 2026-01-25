@@ -3,7 +3,7 @@ import '../styles/frontend.css'
 export default function frontend() {
     return (
         <>
-            <div id="skills" className='skill' style={{ paddingTop: "20px" }}>
+            <div id="skills" className='skill' style={{ paddingTop: "20px", maxWidth: "100%", boxSizing: "border-box", overflowX: "hidden" }}>
                 <div style={{ display: "flex", width: "100%", justifyContent: "center" }}>
                     <h2 style={{ marginTop: "50px", border: "5px solid white", height: "fit-content", width: "fit-content", padding: "10px 25px 10px 25px", color: "#ffffff" }} >SKILL</h2>
                 </div>
