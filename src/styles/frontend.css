@@ -21,7 +21,6 @@
     justify-content: center;
     flex-wrap: wrap;
     max-width: 100%;
-    overflow-x: hidden;
 }
 
 .skill-item {
