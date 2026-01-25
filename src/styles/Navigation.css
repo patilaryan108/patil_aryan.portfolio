@@ -1,0 +1,41 @@
+.Navigation {
+    color: #FFFFFF;
+    display: flex;
+    width: 100%;
+    height: 60px;
+    justify-content: flex-end;
+    align-items: flex-end;
+    background-color: black;
+    position: fixed;
+    z-index: 1000;
+}
+
+#navh3 {
+    margin: 15px;
+    margin-right: 60px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    font-size: x-large;
+}
+
+#navh3:hover {
+    color: #5c5a5a;
+}
+
+#Contact {
+    border: solid 2px #FFFFFF;
+    border-radius: 20px;
+    width: 130px;
+    display: flex;
+    margin: 15px;
+    margin-right: 60px;
+    justify-content: center;
+    color: black;
+    background-color: #FFFFFF;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#Contact:hover {
+    background-color: #5c5a5a;
+}

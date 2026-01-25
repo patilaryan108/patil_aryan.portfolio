@@ -1,0 +1,28 @@
+.about {
+    width: 100%;
+    min-height: 100vh;
+    color: #ffffff;
+
+    background-image: url("/Portfolio.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+}
+
+/* Scroll Animation Styles */
+.fade-in-up {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-in-up.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
