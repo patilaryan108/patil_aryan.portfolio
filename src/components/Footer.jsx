@@ -30,14 +30,14 @@ export default function Footer() {
                         Empowering creativity with advanced web development tools to improve design quality and user experiences.
                     </p>
                     <div className="social-icons">
-                        <a href="#" className="social-icon" title="X">
+                        <a href="https://www.instagram.com/aka.ganesh108/" className="social-icon" title="X">
                             <span> <img src="/instagramwhite.png" alt="" style={{ width: "20px", height: "20px" }} /> </span>
                         </a>
-                        <a href="#" className="social-icon" title="LinkedIn">
+                        <a href="https://www.linkedin.com/in/patil-aryan-1410322b0/" className="social-icon" title="LinkedIn">
                             <span>in</span>
                         </a>
-                        <a href="#" className="social-icon" title="Facebook">
-                            <span>f</span>
+                        <a href="https://github.com/patilaryan108" className="social-icon" title="GitHub">
+                            <span> <img src="/github1.png" alt="" style={{ width: "20px", height: "20px" }} /> </span>
                         </a>
                     </div>
                     <button className="back-to-top-btn" onClick={scrollToTop}>

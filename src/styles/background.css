@@ -1,29 +1,53 @@
-.container {
+/* ========================================
+   HERO SECTION - RESPONSIVE BACKGROUND
+   ======================================== */
+
+.hero-container {
     width: 100%;
     max-width: 100vw;
-    height: 635px;
+    min-height: 620px;
     background-image: url("/background.jpg");
-    display: flex;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    padding-left: 5%;
+    justify-content: space-between;
     box-sizing: border-box;
+    position: relative;
 }
 
-#hi {
-    font-size: 30px;
+/* Hero Content - Text Section */
+.hero-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 600px;
+    z-index: 10;
+}
+
+.hero-greeting {
+    font-size: clamp(1.5rem, 4vw, 2rem);
     margin: 10px 20px 0px 15px;
+    color: #FFFFFF;
 }
 
-h1 {
+.hero-name {
+    font-size: clamp(2.5rem, 6vw, 4rem);
     margin: 10px 15px 0px 15px;
+    color: #FFFFFF;
+    font-weight: 700;
 }
 
-h3 {
+.hero-text h3 {
+    font-size: clamp(1rem, 2.5vw, 1.5rem);
     margin: 10px 15px 0px 15px;
     color: darkgrey;
 }
 
+/* Typing Animation */
 .typing-animation {
     display: inline-block;
 }
@@ -50,59 +74,216 @@ h3 {
     }
 }
 
-@keyframes fadeInOut {
-    0% {
-        opacity: 0;
-    }
-
-    50% {
-        opacity: 1;
-    }
-
-    100% {
-        opacity: 1;
-    }
+/* Desktop Social Media Icons */
+.social-media-desktop {
+    display: flex;
+    gap: 20px;
+    margin-top: 30px;
+    margin-left: 15px;
 }
 
-.left {
-    width: 200px;
-    flex: 1;
+.social-icon {
+    width: 50px;
+    height: 50px;
     display: flex;
-    flex-direction: column;
+    align-items: center;
     justify-content: center;
-    padding-left: 5%;
-    padding-top: 100px;
-    box-sizing: border-box;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
 }
 
-.right {
+.social-icon:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.social-icon img {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+}
+
+/* Hero Image Section */
+.hero-image-section {
     flex: 1;
-    background-image: url("/Patil_Aryan.png");
-    background-size: cover;
-    background-position: center;
-    padding-right: 5%;
-    box-sizing: border-box;
-}
-
-.social-media {
     display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
 }
 
-.square {
-    height: 40px;
+.profile-image-container {
+    position: relative;
+    width: 100%;
+    width: 600px;
+    height: auto;
+}
+
+.profile-image {
+    width: 100%;
+    height: 620px;
+    object-fit: cover;
+    border-radius: 20px;
+    display: block;
+}
+
+/* Glassmorphic Social Card - Mobile Only */
+
+.glass-card-content {
+    text-align: left;
+    color: #FFFFFF;
+}
+
+.glass-card-greeting {
+    font-size: 1rem;
+    margin: 0 0 5px 0;
+    font-weight: 400;
+}
+
+.glass-card-name {
+    font-size: 1.75rem;
+    margin: 0 0 5px 0;
+    font-weight: 700;
+}
+
+.glass-card-title {
+    font-size: 0.9rem;
+    margin: 0 0 20px 0;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.glass-social-icons {
+    display: flex;
+    gap: 15px;
+    justify-content: flex-start;
+}
+
+.glass-icon-link {
     width: 40px;
-    /* background-color: rgb(255, 255, 255); */
-    margin: 15px 20px 0px 20px;
-    border: 2px solid transparent;
-    border-radius: 8px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
     transition: all 0.3s ease;
 }
 
-.square:hover {
+.glass-icon-link:hover {
+    background: rgba(255, 255, 255, 0.3);
     transform: translateY(-3px);
 }
 
-img {
-    height: 40px;
-    width: 40px;
+.glass-icon-link img {
+    width: 22px;
+    height: 22px;
+    object-fit: contain;
+    filter: brightness(0) invert(1);
+}
+
+/* ========================================
+   TABLET RESPONSIVE (≤ 768px)
+   ======================================== */
+@media (max-width: 525px) {
+    .hero-container {
+        flex-direction: column;
+        min-height: auto;
+        background-image: none;
+        background-color: black;
+        padding-top: 90px;
+    }
+
+    .hero-content {
+        max-width: 100%;
+        text-align: center;
+        align-items: center;
+    }
+
+
+    .hero-text h3 {
+        margin: 10px;
+    }
+
+    .hero-image-section {
+        width: 100%;
+        max-width: 350px;
+    }
+
+}
+
+/* ========================================
+   MOBILE RESPONSIVE (≤ 480px)
+   ======================================== */
+@media (max-width: 480px) {
+    .hero-container {
+        padding: 80px 20px 30px;
+    }
+
+    .hero-greeting {
+        font-size: 1.25rem;
+        margin: 5px;
+    }
+
+    .hero-name {
+        font-size: 2rem;
+        margin: 5px;
+    }
+
+    .hero-text h3 {
+        font-size: 0.9rem;
+        margin: 5px;
+    }
+
+    .hero-image-section {
+        max-width: 300px;
+    }
+
+    .profile-image-container {
+        max-width: 300px;
+    }
+
+    .profile-image {
+        border-radius: 12px;
+    }
+
+    .glass-social-card {
+        padding: 20px 12px 12px;
+    }
+
+    .glass-card-greeting {
+        font-size: 0.875rem;
+    }
+
+    .glass-card-name {
+        font-size: 1.375rem;
+    }
+
+    .glass-card-title {
+        font-size: 0.75rem;
+        margin-bottom: 15px;
+    }
+
+    .glass-social-icons {
+        gap: 12px;
+    }
+
+    .glass-icon-link {
+        width: 35px;
+        height: 35px;
+    }
+
+    .glass-icon-link img {
+        width: 18px;
+        height: 18px;
+    }
+}
+
+/* Large Desktop */
+@media (min-width: 1440px) {
+    .hero-container {
+        padding: 100px 10%;
+    }
 }

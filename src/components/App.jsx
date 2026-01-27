@@ -1,4 +1,5 @@
 import '../styles/App.css'
+import '../styles/responsive.css'
 import Navigation from './Navigation'
 import Background from './Background'
 import About from './About'

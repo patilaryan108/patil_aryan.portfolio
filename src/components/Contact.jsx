@@ -58,7 +58,7 @@ export default function Contact() {
     return (
         <>
             <div id="contact" style={{ display: "flex", width: "100%", justifyContent: "center", margin: "0px 0px 20px 0px" }}>
-                <h2 style={{ border: "5px solid black", margin: "0px", height: "fit-content", width: "fit-content", padding: "10px 25px 10px 25px", marginTop: "50px" }} >CONTACT</h2>
+                <h2 style={{ border: "5px solid black", margin: "0px", height: "fit-content", width: "fit-content", padding: "10px 25px 10px 25px", marginTop: "50px", borderRadius: "25px" }} >CONTACT</h2>
             </div>
 
             <div style={{ display: "flex", width: "100%", justifyContent: "center", margin: "20px 0px 30px 0px" }}>
@@ -162,55 +162,58 @@ export default function Contact() {
                 )}
             </div>
             <div className="contact-form-container">
-                <form onSubmit={handleSubmit}>
-                    <div className="form-group">
-                        <input
-                            type="text"
-                            name="name"
-                            placeholder="ENTER YOUR NAME*"
-                            value={formData.name}
-                            onChange={handleChange}
-                            required
-                        />
-                    </div>
+                <div className="contact-card">
+                    <h3>Send a Message</h3>
+                    <form onSubmit={handleSubmit}>
+                        <div className="form-group">
+                            <input
+                                type="text"
+                                name="name"
+                                placeholder="ENTER YOUR NAME*"
+                                value={formData.name}
+                                onChange={handleChange}
+                                required
+                            />
+                        </div>
 
-                    <div className="form-group">
-                        <input
-                            type="email"
-                            name="email"
-                            placeholder="ENTER YOUR EMAIL*"
-                            value={formData.email}
-                            onChange={handleChange}
-                            required
-                        />
-                    </div>
+                        <div className="form-group">
+                            <input
+                                type="email"
+                                name="email"
+                                placeholder="ENTER YOUR EMAIL*"
+                                value={formData.email}
+                                onChange={handleChange}
+                                required
+                            />
+                        </div>
 
-                    <div className="form-group">
-                        <input
-                            type="tel"
-                            name="phone"
-                            placeholder="PHONE NUMBER"
-                            value={formData.phone}
-                            onChange={handleChange}
-                        />
-                    </div>
+                        <div className="form-group">
+                            <input
+                                type="tel"
+                                name="phone"
+                                placeholder="PHONE NUMBER"
+                                value={formData.phone}
+                                onChange={handleChange}
+                            />
+                        </div>
 
-                    <div className="form-group">
-                        <textarea
-                            name="message"
-                            placeholder="YOUR MESSAGE*"
-                            rows="8"
-                            value={formData.message}
-                            onChange={handleChange}
-                            required
-                        ></textarea>
-                    </div>
+                        <div className="form-group">
+                            <textarea
+                                name="message"
+                                placeholder="YOUR MESSAGE*"
+                                rows="8"
+                                value={formData.message}
+                                onChange={handleChange}
+                                required
+                            ></textarea>
+                        </div>
 
-                    <button type="submit" className="submit-btn" disabled={loading}>
-                        {loading ? 'SENDING...' : 'SEND'}
-                    </button>
-                </form>
-            </div >
+                        <button type="submit" className="submit-btn" disabled={loading}>
+                            {loading ? 'SENDING...' : 'SEND'}
+                        </button>
+                    </form>
+                </div>
+            </div>
             <Footer></Footer>
         </>
     )

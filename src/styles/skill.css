@@ -10,3 +10,18 @@
     background-repeat: no-repeat;
     box-sizing: border-box;
 }
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .skill-background {
+        height: auto;
+        min-height: 2200px;
+    }
+}
+
+@media (max-width: 480px) {
+    .skill-background {
+        height: auto;
+        min-height: 2000px;
+    }
+}

@@ -1,10 +1,15 @@
 import '../styles/Navigation.css'
+import { useState } from 'react'
+import { useIsMobileOrTablet } from '../hooks/useMediaQuery'
 
 export default function Navigation() {
+    const [isMenuOpen, setIsMenuOpen] = useState(false)
+    const isMobileOrTablet = useIsMobileOrTablet()
+
     const scrollToSection = (sectionId) => {
         const element = document.getElementById(sectionId)
         if (element) {
-            const navHeight = 40 // Navigation bar height + padding
+            const navHeight = 60 // Navigation bar height
             const elementPosition = element.getBoundingClientRect().top
             const offsetPosition = elementPosition + window.pageYOffset - navHeight
 
@@ -13,24 +18,58 @@ export default function Navigation() {
                 behavior: 'smooth'
             })
         }
+        // Close menu after clicking on mobile
+        if (isMobileOrTablet) {
+            setIsMenuOpen(false)
+        }
     }
 
     const viewResume = () => {
-        // Open resume in a new tab for viewing
         window.open('https://drive.google.com/file/d/1UP0dvAdvCFzfvQA8IanKeahxqQtWBdyH/view?usp=drive_link', '_blank')
+        if (isMobileOrTablet) {
+            setIsMenuOpen(false)
+        }
+    }
+
+    const toggleMenu = () => {
+        setIsMenuOpen(!isMenuOpen)
     }
 
     return (
         <>
-            <div className="Navigation" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                <h3 id='resume-nav' onClick={viewResume} style={{ cursor: 'pointer', marginRight: 'auto' }}>Resume</h3>
-                <div style={{ display: 'flex', gap: '20px' }}>
-                    <h3 id='navh3' onClick={() => scrollToSection('about-me')} style={{ cursor: 'pointer' }}>About Me</h3>
-                    <h3 id='navh3' onClick={() => scrollToSection('projects')} style={{ cursor: 'pointer' }}>Projects</h3>
-                    <h3 id='navh3' onClick={() => scrollToSection('skills')} style={{ cursor: 'pointer' }}>Skills</h3>
-                    <h3 id="Contact" onClick={() => scrollToSection('contact')} style={{ cursor: 'pointer' }}>Contact</h3>
+            <nav className={`navigation ${isMenuOpen ? 'menu-open' : ''}`}>
+                <div className="nav-container">
+                    <h3
+                        id='resume-nav'
+                        onClick={viewResume}
+                        className="nav-logo"
+                    >
+                        Resume
+                    </h3>
+
+                    {/* Hamburger Icon for Mobile/Tablet */}
+                    {isMobileOrTablet && (
+                        <button
+                            className={`hamburger ${isMenuOpen ? 'active' : ''}`}
+                            onClick={toggleMenu}
+                            aria-label="Toggle menu"
+                        >
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </button>
+                    )}
+
+                    <div className={`nav-menu ${isMenuOpen ? 'active' : ''}`}>
+                        <h3 onClick={() => scrollToSection('about-me')}>About Me</h3>
+                        <h3 onClick={() => scrollToSection('projects')}>Projects</h3>
+                        <h3 onClick={() => scrollToSection('skills')}>Skills</h3>
+                        <h3 onClick={() => scrollToSection('contact')}>Contact</h3>
+                    </div>
                 </div>
-            </div>
+            </nav>
+
+            {isMobileOrTablet && isMenuOpen && <div className="menu-spacer"></div>}
         </>
     )
 }

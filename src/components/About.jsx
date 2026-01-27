@@ -37,10 +37,10 @@ export default function About() {
         <>
             <div className="about" id="about-me" ref={sectionRef}>
                 <div style={{ display: "flex", width: "100%", justifyContent: "center", marginTop: "50px" }}>
-                    <h2 className="fade-in-up" ref={(el) => (elementsRef.current[0] = el)} style={{ border: "5px solid #ffffff", margin: "0px", height: "fit-content", width: "fit-content", padding: "10px 25px 10px 25px" }} >ABOUT ME</h2>
+                    <h2 className="fade-in-up" ref={(el) => (elementsRef.current[0] = el)} style={{ border: "5px solid #ffffff", margin: "0px", height: "fit-content", width: "fit-content", padding: "10px 25px 10px 25px", fontWeight: "bold", borderRadius: "25px" }} >ABOUT ME</h2>
                 </div>
                 <div>
-                    <p className="fade-in-up" ref={(el) => (elementsRef.current[1] = el)} style={{ alignItems: "center", fontSize: "20px", textAlign: "justify", padding: "60px 150px 60px 150px" }}>Dedicated Computer Science student with strong foundation in Data Structures & Algorithms and Java programming.
+                    <p className="fade-in-up about-text" ref={(el) => (elementsRef.current[1] = el)} style={{ alignItems: "center", fontSize: "20px", textAlign: "justify", padding: "60px 150px 60px 150px" }}>Dedicated Computer Science student with strong foundation in Data Structures &amp; Algorithms and Java programming.
                         Passionate about web development with hands-on experience building full-stack applications. Active contributor in
                         technical communities with proven problem-solving mindset, continuous learning attitude, and collaborative approach to
                         software development.

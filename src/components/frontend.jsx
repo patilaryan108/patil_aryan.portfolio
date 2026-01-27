@@ -5,9 +5,9 @@ export default function frontend() {
         <>
             <div id="skills" className='skill' style={{ paddingTop: "20px", maxWidth: "100%", boxSizing: "border-box", overflowX: "hidden" }}>
                 <div style={{ display: "flex", width: "100%", justifyContent: "center" }}>
-                    <h2 style={{ marginTop: "50px", border: "5px solid white", height: "fit-content", width: "fit-content", padding: "10px 25px 10px 25px", color: "#ffffff" }} >SKILL</h2>
+                    <h2 style={{ marginTop: "50px", border: "5px solid white", height: "fit-content", width: "fit-content", padding: "10px 25px 10px 25px", color: "#ffffff", borderRadius: "25px" }} >SKILL</h2>
                 </div>
-                <h3 style={{ display: "flex", justifyContent: "center", margin: "50px 0px 5px 0px" }}>FRONTEND TECHNOLOGY</h3>
+                <h3 style={{ display: "flex", justifyContent: "center", margin: "50px 0px 5px 0px", color: "white" }}>FRONTEND TECHNOLOGY</h3>
                 <div className="pic">
                     <div className="skill-item">
                         <img src="/Skill/css.png" alt="CSS" />
@@ -32,7 +32,7 @@ export default function frontend() {
                 </div>
                 <div style={{ display: "flex", justifyContent: "space-evenly" }}>
                     <div>
-                        <h3 style={{ display: "flex", justifyContent: "center", margin: "10px 0px 10px 0px" }}>BACKEND TECHNOLOGY</h3>
+                        <h3 style={{ color: "white", display: "flex", justifyContent: "center", margin: "10px 0px 10px 0px" }}>BACKEND TECHNOLOGY</h3>
                         <div className="pic">
                             <div className="skill-item">
                                 <img src="/Skill/nodejs.png" alt="Node.js" />
@@ -45,7 +45,7 @@ export default function frontend() {
                         </div>
                     </div>
                     <div>
-                        <h3 style={{ display: "flex", justifyContent: "center", margin: "0px 0px 10px 0px" }}>DATABASE</h3>
+                        <h3 style={{ display: "flex", justifyContent: "center", margin: "0px 0px 10px 0px", color: "white" }}>DATABASE</h3>
                         <div className="pic">
                             <div className="skill-item">
                                 <img src="/Skill/mongodb.png" alt="MongoDB" />
@@ -59,7 +59,7 @@ export default function frontend() {
                     </div>
                 </div>
 
-                <h3 style={{ display: "flex", justifyContent: "center", margin: "0px 0px 10px 0px" }}>TOOLS</h3>
+                <h3 style={{ display: "flex", justifyContent: "center", margin: "0px 0px 10px 0px", color: "white" }}>TOOLS</h3>
                 <div className="pic">
                     <div className="skill-item">
                         <img src="/Skill/git.png" alt="Git" />

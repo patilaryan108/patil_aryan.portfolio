@@ -35,3 +35,37 @@
     font-size: 16px;
     line-height: 1.5;
 }
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .card {
+        margin: 0px 10px;
+        padding: 0px 15px;
+    }
+
+    .card h2 {
+        font-size: 20px;
+    }
+
+    .card p {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .card {
+        margin: 0px 5px;
+        padding: 15px 10px;
+        min-height: 180px;
+    }
+
+    .card h2 {
+        font-size: 18px;
+        margin: 0px 0px 10px 0px;
+    }
+
+    .card p {
+        font-size: 14px;
+        margin: 6px 0px;
+    }
+}
