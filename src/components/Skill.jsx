@@ -1,7 +1,6 @@
 import '../styles/skill.css'
 import Frontend from './frontend'
 import Projects from './Projects'
-import Contact from './Contact'
 
 export default function skill() {
     return (
@@ -10,9 +9,6 @@ export default function skill() {
                 <Projects></Projects>
                 <div>
                     <Frontend></Frontend>
-                </div>
-                <div>
-                    <Contact></Contact>
                 </div>
             </div >
         </>
