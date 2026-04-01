@@ -36,8 +36,19 @@ export default function About() {
     return (
         <>
             <div className="about" id="about-me" ref={sectionRef}>
-                <div style={{ display: "flex", width: "100%", justifyContent: "center", marginTop: "50px" }}>
-                    <h2 className="fade-in-up" ref={(el) => (elementsRef.current[0] = el)} style={{ border: "5px solid #ffffff", margin: "0px", height: "fit-content", width: "fit-content", padding: "10px 25px 10px 25px", fontWeight: "bold", borderRadius: "25px" }} >ABOUT ME</h2>
+                <div style={{ display: "flex", width: "100%", justifyContent: "center", marginBottom: "40px" }}>
+                    <h2 className="fade-in-up" ref={(el) => (elementsRef.current[0] = el)} style={{ 
+                        borderBottom: "3px solid var(--accent-color)", 
+                        color: "var(--text-primary)", 
+                        margin: "0px", 
+                        height: "fit-content", 
+                        width: "fit-content", 
+                        padding: "10px 20px", 
+                        fontWeight: "700",
+                        fontSize: "clamp(1.5rem, 4vw, 2.5rem)",
+                        letterSpacing: "2px",
+                        marginTop: "50px"
+                    }} >ABOUT ME</h2>
                 </div>
                 <div>
                     <p className="fade-in-up about-text" ref={(el) => (elementsRef.current[1] = el)} style={{ alignItems: "center", fontSize: "20px", textAlign: "justify", padding: "60px 150px 60px 150px" }}>Dedicated Computer Science student with strong foundation in Data Structures &amp; Algorithms and Java programming.
@@ -46,7 +57,7 @@ export default function About() {
                         software development.
                     </p>
                 </div>
-                <div style={{ display: "flex", justifyContent: "space-evenly", alignItems: "stretch", gap: "40px", margin: "45px 20px 80px 20px", flexWrap: "wrap" }}>
+                <div style={{ display: "flex", justifyContent: "space-evenly", alignItems: "stretch", gap: "40px", margin: "45px 20px 20px 20px", flexWrap: "wrap" }}>
                     <div className="fade-in-up" ref={(el) => (elementsRef.current[2] = el)} style={{ animationDelay: "0.2s", flex: "1 1 400px", maxWidth: "500px" }}>
                         <Card clgname={"Nitte Meenakshi Institute of Technology"} location={"Bengluru , Karnataka"} grade={"CGPA : 8.23"} course={"Bachelor of Engineering in Computer Science"}></Card>
                     </div>

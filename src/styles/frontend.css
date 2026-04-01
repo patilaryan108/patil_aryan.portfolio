@@ -40,7 +40,8 @@
 }
 
 .skill {
-    background-image: url("/Portfolio.png");
+    background-color: transparent;
+    font-family: 'Outfit', sans-serif;
 }
 
 /* Responsive styles */

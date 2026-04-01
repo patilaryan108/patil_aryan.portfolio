@@ -1,31 +1,59 @@
+:root {
+  --bg-primary: #0f172a; /* Slate 900 */
+  --bg-secondary: #1e293b; /* Slate 800 */
+  --text-primary: #f8fafc; /* Slate 50 */
+  --text-secondary: #cbd5e1; /* Slate 300 */
+  --accent-color: #3b82f6; /* Blue 500 */
+  --accent-hover: #60a5fa; /* Blue 400 */
+  --nav-bg: rgba(15, 23, 42, 0.85); /* Glassmorphism slate */
+}
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.2;
+  color: var(--text-primary);
+  margin-top: 0;
+}
+
 h1 {
   font-size: 3.2em;
-  line-height: 1.1;
 }
 
 html,
 body {
   max-width: 100vw;
   width: 100%;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
-/* Hide horizontal scrollbar */
+/* Custom minimal scrollbar */
+html::-webkit-scrollbar {
+  width: 8px;
+}
 html::-webkit-scrollbar-track {
-  background: transparent;
+  background: var(--bg-primary);
+}
+html::-webkit-scrollbar-thumb {
+  background: var(--bg-secondary);
+  border-radius: 4px;
+}
+html::-webkit-scrollbar-thumb:hover {
+  background: var(--text-secondary);
 }
 
 html {
   -ms-overflow-style: none;
   scrollbar-width: thin;
+  scroll-behavior: smooth; /* Smooth scrolling for anchor links */
 }
 
 body {
-  background-color: #8B8B8B;
+  background-color: var(--bg-primary);
+  color: var(--text-secondary);
   margin: 0;
   padding: 0;
-  width: 100vw;
+  width: 100%;
   min-height: 100vh;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-family: 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
   display: flex;
   flex-direction: column;
 }
@@ -37,33 +65,31 @@ button {
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #1a1a1a;
+  background-color: var(--accent-color);
+  color: #fff;
   cursor: pointer;
-  transition: border-color 0.25s;
+  transition: all 0.3s ease;
 }
 
 button:hover {
-  border-color: #646cff;
+  background-color: var(--accent-hover);
+  transform: translateY(-2px); /* Slight lift effect */
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
 }
 
 button:focus,
 button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+  outline: 4px auto rgba(59, 130, 246, 0.4);
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
+a {
+  color: var(--accent-color);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
 
-  a:hover {
-    color: #747bff;
-  }
-
-  button {
-    background-color: #f9f9f9;
-  }
+a:hover {
+  color: var(--accent-hover);
 }
 
 /* Responsive Typography */
@@ -77,4 +103,17 @@ button:focus-visible {
   h1 {
     font-size: 2em;
   }
+}
+
+/* Global Mesh Background Animations */
+@keyframes meshFloat {
+  0% { transform: translate(0, 0) scale(1); }
+  33% { transform: translate(5%, 5%) scale(1.1); }
+  66% { transform: translate(-5%, 10%) scale(0.9); }
+  100% { transform: translate(0, 0) scale(1); }
+}
+
+@keyframes meshRotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
 }
