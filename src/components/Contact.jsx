@@ -94,7 +94,7 @@ export default function Contact() {
                     cursor: "pointer"
                 }}
                     onClick={() => {
-                        window.open('https://drive.google.com/file/d/1UP0dvAdvCFzfvQA8IanKeahxqQtWBdyH/view?usp=drive_link', '_blank');
+                        window.open('https://drive.google.com/file/d/1i0dsMSRbXcc3Xb32fYAFKah4tsiHrmnO/view?usp=drive_link', '_blank');
                     }}
                     onMouseEnter={(e) => {
                         e.currentTarget.style.transform = "translateY(-5px) scale(1.02)";

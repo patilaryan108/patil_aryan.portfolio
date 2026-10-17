@@ -20,7 +20,16 @@ export default function Project() {
                 <div style={{ display: "flex", justifyContent: "center", flexWrap: "wrap", maxWidth: "1200px", margin: "0 auto", gap: "40px" }}>
                     <a href="https://patil-aryan-portfolio.vercel.app/" style={{ textDecoration: "none" }} className="card1-link"><Card1 img={"Resume.png"} name="PORTFOLIO" ></Card1></a>
                     <a href="https://github.com/patilaryan108/Habit_tracker" target="_blank" rel="noopener noreferrer" style={{ textDecoration: "none" }} className="card1-link"><Card1 img={"habit_tracker.png"} name="HABIT TRACKER" ></Card1></a>
-                        <Card3 video={"/video.mp4"} name={"COMING SOON"}></Card3>
+                    <Card3
+                        image={"/asksphere.png"}
+                        name={"AskSphere"}
+                        link={"https://github.com/patilaryan108/AskSphere"}
+                    />
+                    <Card3
+                        image={"/bitebox.png"}
+                        name={"BiteBox"}
+                        link={"https://github.com/patilaryan108/BiteBox"}
+                    />
                     </div>
                 </div>
             </div>
